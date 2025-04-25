@@ -1,0 +1,12 @@
+# Python dependencies
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+prometheus_client
+transformers
+torch
+sentencepiece
+langdetect
+beautifulsoup4
+requests
