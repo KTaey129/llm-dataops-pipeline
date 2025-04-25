@@ -1,0 +1,45 @@
+{
+    "name": "LLM DataOps Pipeline Dev",
+    
+    // build Dockerfile as container
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": "."
+    },
+  
+    // user in container
+    "remoteUser": "vscode",
+  
+    // VS Code plugins
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "rust-lang.rust-analyzer",
+          "ms-azuretools.vscode-docker",
+          "ms-kubernetes-tools.vscode-kubernetes-tools",
+          "bungcip.better-toml"
+        ]
+      }
+    },
+  
+    // command after creating container
+    "postCreateCommand": "uv install --upgrade pip && uv install -r requirements.txt",
+  
+    // port forwarding
+    "forwardPorts": [
+      8000,  // FastAPI
+      5432,  // PostgreSQL 
+      9090,  // Prometheus
+      3000,  // Grafana
+      8088   // Superset 
+    ],
+  
+    // convinience settings
+    "settings": {
+      "python.pythonPath": "/opt/venv/bin/python",
+      "python.defaultInterpreterPath": "/opt/venv/bin/python",
+      "terminal.integrated.shell.linux": "/bin/bash"
+    }
+  }
+  
