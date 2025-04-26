@@ -5,3 +5,5 @@ newsapi:
   key: ""  # Your NewsAPI key here
   query: "ytn"  # Search query for YTN news
   language: "ko"  # Korean language 
+
+clean_dir: data/clean
