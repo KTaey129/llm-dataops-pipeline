@@ -1,0 +1,7 @@
+output_dir: "data/raw"
+rss_feeds:
+  - "https://www.ytn.co.kr/rss/all.xml"  # YTN RSS feed
+newsapi:
+  key: ""  # Your NewsAPI key here
+  query: "ytn"  # Search query for YTN news
+  language: "ko"  # Korean language 
