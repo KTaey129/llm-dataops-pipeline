@@ -7,3 +7,4 @@ newsapi:
   language: "ko"  # Korean language 
 
 clean_dir: data/clean
+db_url: postgresql://dataops:pass_word_is_mine@localhost:5432/dataops
